@@ -78,3 +78,131 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 5.0ms | Allocations: 1140)
 
 
+Started PUT "/tweets/2" for ::1 at 2021-02-23 17:12:50 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"2", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+Completed 200 OK in 50ms (Views: 0.8ms | ActiveRecord: 17.4ms | Allocations: 7334)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:12:59 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.4ms | Allocations: 995)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:13:04 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.9ms | Allocations: 959)
+
+
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:13:52 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+Completed 200 OK in 127ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 619)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:14:47 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 1.3ms | Allocations: 942)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:14:50 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 943)
+
+
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:16:30 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+Completed 200 OK in 49ms (Views: 6.9ms | ActiveRecord: 30.7ms | Allocations: 3159)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:16:40 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 961)
+
+
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:17:13 -0500
+  
+SyntaxError (/Users/chaco/Desktop/seir-1207/Rails/W11D02HW/tweeter_app_api/app/controllers/tweets_controller.rb:23: syntax error, unexpected label, expecting ')'
+        render (json: {status: 200, tweet: tweet})
+                ^~~~~
+/Users/chaco/Desktop/seir-1207/Rails/W11D02HW/tweeter_app_api/app/controllers/tweets_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/tweets_controller.rb:23: syntax error, unexpected label, expecting ')'
+app/controllers/tweets_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/tweets_controller.rb:23: syntax error, unexpected label, expecting ')'
+app/controllers/tweets_controller.rb:32: syntax error, unexpected end-of-input, expecting `end'
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:17:34 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 16.7ms | Allocations: 3207)
+
+
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:17:44 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (9.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+Completed 200 OK in 65ms (Views: 0.4ms | ActiveRecord: 9.3ms | Allocations: 609)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:18:08 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 961)
+
+
+Started GET "/tweets/3" for ::1 at 2021-02-23 17:18:39 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:8:in `show'
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 599)
+
+
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:20:21 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 15.8ms | Allocations: 4890)
+
+
+  
+NameError (undefined local variable or method `song' for #<TweetsController:0x00000000009ce0>):
+  
+app/controllers/tweets_controller.rb:23:in `update'
+Started PUT "/tweets/3" for ::1 at 2021-02-23 17:20:34 -0500
+Processing by TweetsController#update as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+  [1m[36mTweet Update (0.9ms)[0m  [1m[33mUPDATE "tweets" SET "author" = $1, "updated_at" = $2 WHERE "tweets"."id" = $3[0m  [["author", "Alex Chaconas"], ["updated_at", "2021-02-23 22:20:34.404347"], ["id", 3]]
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:23:in `update'
+Completed 200 OK in 160ms (Views: 0.6ms | ActiveRecord: 77.4ms | Allocations: 5282)
+
+
