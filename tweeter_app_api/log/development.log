@@ -206,3 +206,25 @@ Processing by TweetsController#update as */*
 Completed 200 OK in 160ms (Views: 0.6ms | ActiveRecord: 77.4ms | Allocations: 5282)
 
 
+Started DELETE "/tweets/3" for ::1 at 2021-02-23 17:22:19 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#destroy as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas", "id"=>"3", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex Chaconas"}}
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+Completed 204 No Content in 43ms (Views: 0.2ms | ActiveRecord: 18.1ms | Allocations: 8566)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:22:23 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.5ms | Allocations: 1040)
+
+
