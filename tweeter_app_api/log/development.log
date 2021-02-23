@@ -58,3 +58,23 @@ Processing by TweetsController#show as HTML
 Completed 200 OK in 45ms (Views: 0.8ms | ActiveRecord: 1.9ms | Allocations: 618)
 
 
+Started POST "/tweets" for ::1 at 2021-02-23 17:10:42 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#create as */*
+  Parameters: {"title"=>"Hello", "content"=>"World", "author"=>"Alex", "tweet"=>{"title"=>"Hello", "content"=>"World", "author"=>"Alex"}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("title", "content", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Hello"], ["content", "World"], ["author", "Alex"], ["created_at", "2021-02-23 22:10:42.894344"], ["updated_at", "2021-02-23 22:10:42.894344"]]
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+Completed 200 OK in 41ms (Views: 0.5ms | ActiveRecord: 13.7ms | Allocations: 8310)
+
+
+Started GET "/tweets" for ::1 at 2021-02-23 17:10:52 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (5.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/controllers/tweets_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 5.0ms | Allocations: 1140)
+
+
